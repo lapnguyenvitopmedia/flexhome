@@ -96,44 +96,13 @@
         $page = Theme::get('page');
     @endphp
     @if (url()->current() == route('public.single') || ($page && $page->template === 'homepage'))
+        
+    @else
         <div class="home_banner" style="background-image: url({{ theme_option('home_banner') ? RvMedia::getImageUrl(theme_option('home_banner')) : Theme::asset()->url('images/banner.jpg') }})">
             <div class="topsearch">
-                @if (theme_option('home_banner_description'))<h1 class="text-center text-white mb-4" style="font-size: 36px; font-weight: 600;">{{ theme_option('home_banner_description') }}</h1>@endif
-                <form action="{{ route('public.projects') }}" method="GET" id="frmhomesearch">
-                    <div class="typesearch" id="hometypesearch">
-                        <a href="javascript:void(0)" class="active" rel="project" data-url="{{ route('public.projects') }}">{{ __('Projects') }}</a>
-                        <a href="javascript:void(0)" rel="sale" data-url="{{ route('public.properties') }}">{{ __('Sale') }}</a>
-                        <a href="javascript:void(0)" rel="rent" data-url="{{ route('public.properties') }}">{{ __('Rent') }}</a>
-                    </div>
-                    <div class="input-group input-group-lg">
-                        <input type="hidden" name="type" value="project" id="txttypesearch">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="far fa-search"></i></span>
-                        </div>
-                        <div class="keyword-input">
-                            <input type="text" class="form-control" name="k" placeholder="{{ __('Enter keyword...') }}" id="txtkey" autocomplete="off">
-                        </div>
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="far fa-location"></i></span>
-                        </div>
-                        <div class="location-input">
-                            <input type="hidden" name="city_id">
-                            <input class="select-city-state form-control" name="location" value="{{ request()->input('location') }}" placeholder="{{ __('City, State') }}" autocomplete="off">
-                            <div class="spinner-icon">
-                                <i class="fas fa-spin fa-spinner"></i>
-                            </div>
-                            <div class="suggestion">
-
-                            </div>
-                        </div>
-                        <div class="input-group-append">
-                            <button class="btn btn-orange" type="submit">{{ __('Search') }}</button>
-                        </div>
-                    </div>
-                    <div class="listsuggest stylebar">
-
-                    </div>
-                </form>
+                @if (theme_option('home_banner_description'))
+                    <h1 class="text-center text-white mb-4" style="font-size: 36px; font-weight: 600;">{{ theme_option('home_banner_description') }}</h1>
+                @endif
             </div>
         </div>
         </div>
