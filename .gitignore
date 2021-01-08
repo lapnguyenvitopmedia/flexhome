@@ -16,9 +16,6 @@ npm-debug.log
 sftp-config.json
 .phpstorm.meta.php
 _ide_helper_models.php
-/storage/app/backup
-/storage/cache_keys.json
-/storage/languages.json
 
 __MACOSX
 /.phpintel
@@ -29,9 +26,6 @@ package-lock.json
 yarn.lock
 /.sass-cache
 
-storage/settings.json
-
-public/mix-manifest.json
 
 /storage/installing
 public/docs
