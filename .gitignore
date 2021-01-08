@@ -1,6 +1,5 @@
 /node_modules
 /public/hot
-/public/storage
 /storage/*.key
 /vendor
 .DS_Store
@@ -24,8 +23,6 @@ _ide_helper_models.php
 __MACOSX
 /.phpintel
 /.php_cs.cache
-
-public/vendor/core
 
 _ide_helper.php
 package-lock.json
