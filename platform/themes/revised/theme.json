@@ -1,0 +1,14 @@
+{
+    "name": "Revised",
+    "namespace": "Theme\\Revised\\",
+    "description": "theme",
+    "author": "",
+    "version": "2.14",
+    "required_plugins": [
+        "blog",
+        "contact",
+        "language",
+        "location",
+        "real-estate"
+    ]
+}
